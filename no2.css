@@ -11,6 +11,29 @@ body {
     background-color:  #E6DACE;
 }
 
+nav {
+    padding: 2rem 3rem;
+    background-color: white;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+
+nav ul li {
+    cursor: pointer;
+}
+nav ul li:hover {
+    color: blue;
+}
+
 section {
     display: flex;
     flex-direction: column;

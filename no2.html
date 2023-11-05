@@ -33,6 +33,7 @@
             <button type="button" onclick="Kalkulator('-')">-</button>
             <button type="button" onclick="Kalkulator('x')">x</button>
             <button type="button" onclick="Kalkulator('/')">/</button>
+            <button type="button" onclick="bersihkan()">Clear</button>
         </div>
     </section>
 
@@ -64,6 +65,12 @@
             }
 
             document.getElementById("hasil").innerHTML = hasil
+        }
+
+        function bersihkan() {
+            document.getElementById("bil1").value = ""
+            document.getElementById("bil2").value = ""
+            document.getElementById("hasil").innerHTML = ""
         }
 
         document.getElementById("tambahan").innerHTML = "Dimodifikasi terakhir pada " + document.lastModified

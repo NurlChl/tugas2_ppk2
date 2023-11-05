@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Nilai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color:  #E6DACE;
+        }
+
+        label {
+            font-family: 'poppins';
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 10rem auto;
+            width: 30%;
+            background-color: white;
+            padding: 5rem 3rem;
+        }
+
+        form ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        form ul input {
+            outline: none;
+            border: none;
+            border-bottom: 2px solid black;
+            padding: 1rem .5rem;
+            font-family: 'poppins';
+            color: blue;
+        }
+        form ul input:hover {
+            border-bottom: 2px solid blue;
+        }
+        form ul input:focus {
+            border-bottom: 2px solid blue;
+        }
+
+        form button {
+            width: fit-content;
+            margin: 0 auto;
+            padding: .5rem 2rem;
+            border: none;
+            border-radius: 100rem;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: 'poppins';
+        }
+
+    </style>
+</head>
+<body>
+    <form action="" method="post" name="kirimNilai">
+        <ul>
+            <label for="nilai">Masukkan Nilai</label>
+            <input type="number" id="nilai" name="nilai" >
+        </ul>
+        <ul class="pesan">
+            <p id="pesan"></p>
+            <p id="nilaiHuruf"></p>
+        </ul>
+        <button type="button" onclick="konversiNilai()">Konversi Nilai</button>
+    </form>
+
+    <script>
+
+        
+        function konversiNilai() {
+            let nilai = document.kirimNilai.nilai.value
+
+            if (nilai >= 0 && nilai <= 40) {
+                document.getElementById("pesan").innerHTML = "Nilai anda adalah :"
+                document.getElementById("nilaiHuruf").innerHTML = "E"
+            }else if (nilai > 40 && nilai <= 55) {
+                document.getElementById("pesan").innerHTML = "Nilai anda adalah :"
+                document.getElementById("nilaiHuruf").innerHTML = "D"
+            }else if (nilai > 55 && nilai <= 60) {
+                document.getElementById("pesan").innerHTML = "Nilai anda adalah :"
+                document.getElementById("nilaiHuruf").innerHTML = "C"
+            }else if (nilai > 60 && nilai <= 65) {
+                document.getElementById("pesan").innerHTML = "Nilai anda adalah :"
+                document.getElementById("nilaiHuruf").innerHTML = "BC"
+            }else if (nilai > 65 && nilai <= 70) {
+                document.getElementById("pesan").innerHTML = "Nilai anda adalah :"
+                document.getElementById("nilaiHuruf").innerHTML = "B"
+            }else if (nilai > 70 && nilai <= 80) {
+                document.getElementById("pesan").innerHTML = "Nilai anda adalah :"
+                document.getElementById("nilaiHuruf").innerHTML = "AB"
+            }else {
+                document.getElementById("pesan").innerHTML = "Nilai anda adalah :"
+                document.getElementById("nilaiHuruf").innerHTML = "A"
+            }
+        }
+
+    </script>
+</body>
+</html>
